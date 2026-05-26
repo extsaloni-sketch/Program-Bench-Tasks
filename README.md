@@ -41,12 +41,6 @@ All four tasks satisfy this rule:
 
 ## Important privacy note
 
-Keep this repository private if it contains hidden checks, expected outputs, model failure details, or evaluator-only notes.
-
-The model-visible task prompt should include only:
-- compiled binary
-- README / help text
-- allowed fixtures
 
 The agent should not see:
 - hidden checks
@@ -61,4 +55,3 @@ The agent should not see:
 2. Review `evaluation/programbench_difficulty_validation.md`.
 3. Review `reports/benchmark_report.md`.
 4. Confirm that hidden checks are not exposed to the coding agents during evaluation.
-5. Keep the repository private if it includes internal validation details.
