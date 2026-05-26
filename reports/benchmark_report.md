@@ -1,6 +1,5 @@
 # ProgramBench Benchmark Report
 
-## Executive summary
 
 This report summarizes four ProgramBench task samples and their difficulty validation. The tasks are designed to test whether coding agents can reconstruct real command-line program behavior from compiled binaries, documentation/help text, and allowed fixtures.
 
@@ -255,10 +254,3 @@ All four tasks are valid ProgramBench tasks and meet the difficulty approval rul
 | choose | 2 of 3 agents failed |
 | tokei | 3 of 3 agents failed |
 
-## Recommended status
-
-`approved_after_difficulty_validation`
-
-## Final recommendation
-
-These tasks are ready to share for review and can be pushed to GitHub alongside the task definitions and difficulty-validation file. The repository should remain private if it includes hidden checks, expected outputs, or detailed failure analysis.
