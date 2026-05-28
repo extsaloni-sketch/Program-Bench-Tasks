@@ -1,0 +1,5 @@
+{
+  "task_name": "ripgrep",
+  "included": true,
+  "validation_source": "reports/validation_report.txt"
+}
