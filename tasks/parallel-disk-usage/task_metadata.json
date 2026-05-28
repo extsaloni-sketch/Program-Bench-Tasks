@@ -1,5 +1,10 @@
 {
   "task_name": "parallel-disk-usage",
-  "included": true,
-  "validation_source": "reports/validation_report.txt"
+  "official_task_id": "ksxgithub__parallel-disk-usage.96978ed",
+  "official_task_path": "src/programbench/data/tasks/ksxgithub__parallel-disk-usage.96978ed",
+  "official_url": "https://github.com/facebookresearch/ProgramBench/tree/main/src/programbench/data/tasks/ksxgithub__parallel-disk-usage.96978ed",
+  "agents_evaluated": 6,
+  "agents_failed": 4,
+  "validation_status": "validated",
+  "inclusion_reason": "At least two independent coding agents failed or produced incomplete solutions under hidden ProgramBench evaluation."
 }

@@ -1,5 +1,10 @@
 {
   "task_name": "ripgrep",
-  "included": true,
-  "validation_source": "reports/validation_report.txt"
+  "official_task_id": "burntsushi__ripgrep.3b7fd44",
+  "official_task_path": "src/programbench/data/tasks/burntsushi__ripgrep.3b7fd44",
+  "official_url": "https://github.com/facebookresearch/ProgramBench/tree/main/src/programbench/data/tasks/burntsushi__ripgrep.3b7fd44",
+  "agents_evaluated": 6,
+  "agents_failed": 6,
+  "validation_status": "validated",
+  "inclusion_reason": "At least two independent coding agents failed or produced incomplete solutions under hidden ProgramBench evaluation."
 }

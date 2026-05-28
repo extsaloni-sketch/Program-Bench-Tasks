@@ -1,5 +1,10 @@
 {
-  "task_name": "blake3",
-  "included": true,
-  "validation_source": "reports/validation_report.txt"
+  "task_name": "BLAKE3",
+  "official_task_id": "blake3-team__blake3.15e83a5",
+  "official_task_path": "src/programbench/data/tasks/blake3-team__blake3.15e83a5",
+  "official_url": "https://github.com/facebookresearch/ProgramBench/tree/main/src/programbench/data/tasks/blake3-team__blake3.15e83a5",
+  "agents_evaluated": 5,
+  "agents_failed": 2,
+  "validation_status": "validated",
+  "inclusion_reason": "At least two independent coding agents failed or produced incomplete solutions under hidden ProgramBench evaluation."
 }

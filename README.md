@@ -1,57 +1,45 @@
-# ProgramBench Task Evaluation Report
+# Program-Bench Task Validation Repository
 
-This repository contains four ProgramBench task samples, their difficulty validation, and a readable benchmark report summarizing why the tasks are suitable for approval.
+This repository organizes ProgramBench task candidates with validation evidence from multiple coding-agent evaluations.
 
-## What is included
+The goal is to make each task easy to inspect, reproduce, and review by ML researchers working on coding-agent benchmarking, task difficulty analysis, and hidden-test robustness.
+
+## Included Tasks
+
+| Task | Official ProgramBench Task | Agent Validation |
+|---|---|---|
+| hashcards | eudoxia0__hashcards.48aa136 | 6 agents evaluated, 4 failed |
+| BLAKE3 | blake3-team__blake3.15e83a5 | 5 agents evaluated, 2 failed |
+| ripgrep | burntsushi__ripgrep.3b7fd44 | 6 agents evaluated, 6 failed |
+| parallel-disk-usage | ksxgithub__parallel-disk-usage.96978ed | 6 agents evaluated, 4 failed |
+| zstd | facebook__zstd.1168da0 | 6 agents evaluated, 5 failed |
+
+## Repository Structure
 
 ```text
-.
-├── README.md
-├── reports/
-│   └── benchmark_report.md
-├── tasks/
-│   └── programbench_tasks_24_05_26_rework_1.md
-├── evaluation/
-│   └── programbench_difficulty_validation.md
-└── validation/
-    └── validation_summary.md
-```
+tasks/
+  <task-name>/
+    README.md
+    task_metadata.json
+    agent_evaluations.md
 
-## Task set
+reports/
+  validation_report.txt
 
-| Task ID | Program | Source | Language | Practical Complexity | Approval Status |
-|---|---|---|---|---|---|
-| Task 001 | gron | tomnomnom__gron.c29c628 | Go | High | Approved |
-| Task 002 | sd | chmln__sd.f8e1042 | Rust | High | Approved |
-| Task 003 | choose | theryangeary__choose.a5d3f91 | Rust | High | Approved |
-| Task 004 | tokei | XAMPPRocky__tokei.d2c7b84 | Rust | High | Approved |
+scripts/
+  validate_repo_structure.py
 
-## Approval rule
+Add detailed per-task metadata:
 
-A task is considered strong enough if at least two coding agents fail the hidden behavioral checks.
-
-All four tasks satisfy this rule:
-
-| Task | GPT-4o | Claude Sonnet 4.6 | Gemini 1.5 Pro | Result |
-|---|---|---|---|---|
-| gron | Fail | Fail | Pass | Approved |
-| sd | Fail | Fail | Fail | Approved |
-| choose | Fail | Fail | Pass | Approved |
-| tokei | Fail | Fail | Fail | Approved |
-
-## Important privacy note
-
-
-The agent should not see:
-- hidden checks
-- expected outputs
-- failure analysis
-- evaluator notes
-- validation summary
-
-## Recommended review flow
-
-1. Review `tasks/programbench_tasks_24_05_26_rework_1.md`.
-2. Review `evaluation/programbench_difficulty_validation.md`.
-3. Review `reports/benchmark_report.md`.
-4. Confirm that hidden checks are not exposed to the coding agents during evaluation.
+```bash
+cat > tasks/hashcards/task_metadata.json <<'EOF'
+{
+  "task_name": "hashcards",
+  "official_task_id": "eudoxia0__hashcards.48aa136",
+  "official_task_path": "src/programbench/data/tasks/eudoxia0__hashcards.48aa136",
+  "official_url": "https://github.com/facebookresearch/ProgramBench/tree/main/src/programbench/data/tasks/eudoxia0__hashcards.48aa136",
+  "agents_evaluated": 6,
+  "agents_failed": 4,
+  "validation_status": "validated",
+  "inclusion_reason": "At least two independent coding agents failed or produced incomplete solutions under hidden ProgramBench evaluation."
+}
